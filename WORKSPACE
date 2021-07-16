@@ -38,18 +38,17 @@ bind(
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 maven_install(
     artifacts = [
-        "com.google.guava:guava:30.1.1-jre",
         "com.google.code.gson:gson:2.8.6",
         "com.google.errorprone:error_prone_annotations:2.3.2",
+        "com.google.guava:guava:30.1.1-jre",
+        "com.google.truth:truth:1.1.2",
         "junit:junit:4.12",
         "org.easymock:easymock:3.2",
         "org.easymock:easymockclassextension:3.2",
-        "com.google.truth:truth:1.1.2",
     ],
     repositories = [
         "https://repo1.maven.org/maven2",
-        "http://mirrors.ibiblio.org/pub/mirrors/maven2",
-        "http://www.ibiblio.net/pub/packages/maven2",
+        "https://repo.maven.apache.org/maven2",
     ],
     # For updating instructions, see: 
     # https://github.com/bazelbuild/rules_jvm_external#updating-maven_installjson
